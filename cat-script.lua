@@ -35,3 +35,24 @@ local nameLabel = library:CreateLabel("version 1.0 or whatever", nameTab)
 
 library:Initialize()
 print("tabs successfully")
+
+-- Start GUI
+local library = loadstring(game:HttpGet("https://raw.githubusercontent.com/scarlet1837/gui-scarlet-script/refs/heads/main/library.lua"))()
+
+local gui, sidebar, mainFrame = library:CreateMainGUI("Scarlet Script")
+
+local homeTab = library:CreateTab("Home", sidebar, mainFrame)
+
+local creditsTab = library:CreateTab("Credits", sidebar, mainFrame)
+
+local homeButton = library:CreateButton("Scarlet Script", homeTab, function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/scarlet1837/a/main/Tpwalk"))()
+end)
+
+local creditsButton = library:CreateButton("Script Test", creditsTab, function()
+    -- Add your script code here
+end)
+
+local creditsLabel = library:CreateLabel("version 1.0", creditsTab)
+
+library:Initialize()
