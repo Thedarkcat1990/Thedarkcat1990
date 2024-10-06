@@ -31,5 +31,7 @@ local link = "https://discord.gg/7pedJ9Jf"
 
 end)
 
+local nameLabel = library:CreateLabel("version 1.0 or whatever", nameTab)
+
 library:Initialize()
 print("tabs successfully")
